@@ -14,7 +14,6 @@ app.use(cors());
 app.use(express.json());
 // Routes
 app.use('/api/auth', loginRoutes);
-// app.use('/images', express.static('../airbnb-backend/data/images'));
 
 // Connect to the database
 connectDB();
@@ -37,10 +36,10 @@ app.get('/api/listings', async (req, res) => {
 
 
 app.get('/api/listings/user/:userId', async (req, res) => {
-  console.log("User ID: ",req.params.userId);
+  // console.log("User ID: ",req.params.userId);
   try {
     const listings = await Listing.find({ userId: req.params.userId }).populate('_id');
-    console.log("Listings: ",listings);
+    // console.log("Listings: ",listings);
     res.status(200).json(listings);
   } catch (err) {
     res.status(500).json({ error: err.message });
