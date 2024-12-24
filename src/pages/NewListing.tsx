@@ -93,7 +93,7 @@ const NewListing = () => {
                             selected={DueDate}
                             onChange={(date) => setDueDate(date)}
                             placeholderText="Add date"
-                            className="w-3/4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+                            className="w-3/4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                             dateFormat="MMM d, yyyy"
                             required
                         />

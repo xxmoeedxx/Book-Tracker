@@ -5,7 +5,14 @@ import Footer from '../components/Footer';
 import useAuth from '../components/useAuth';
 
 const Homepage = () => {
-  const [Tasks, setTasks] = useState([{ _id: "_", title: '', description: '', DueDate: new Date() }]); // Initialize with an empty array
+  interface Task {
+    _id: string;
+    title: string;
+    description: string;
+    DueDate: Date;
+  }
+
+  const [Tasks, setTasks] = useState<Task[]>([]); // Initialize with an empty array
   const { user } = useAuth();
   const [UserId,setUserId] = useState(user?.id);
   useEffect(() => {
@@ -35,7 +42,7 @@ const Homepage = () => {
     <div>
       <Navbar />
       <div className="p-4">
-      {Tasks.length > 1 ? (
+      {Tasks.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
           {Tasks.map((listing) => (
             <ListingCard key={listing._id} listing={listing} />
