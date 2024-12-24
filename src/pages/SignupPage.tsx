@@ -56,7 +56,7 @@ const SignupPage = () => {
                     />
                     <button
                         type="submit"
-                        className="w-full bg-red-500 text-white py-3 rounded-md hover:bg-red-600"
+                        className="w-full bg-blue-800 text-white py-3 rounded-md hover:bg-blue-900"
                     >
                         Sign Up
                     </button>
@@ -64,7 +64,7 @@ const SignupPage = () => {
                 <div className="mt-4 text-center">
                     <p>
                         Already have an account?{' '}
-                        <Link to="/login" className="text-red-500 hover:underline">
+                        <Link to="/login" className="text-blue-800 hover:underline">
                             Log in
                         </Link>
                     </p>

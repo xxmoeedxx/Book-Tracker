@@ -57,7 +57,7 @@ const LoginPage = () => {
                 />
                 <button
                 type="submit"
-                className="w-full bg-red-500 text-white py-3 rounded-md hover:bg-red-600"
+                className="w-full bg-blue-800 text-white py-3 rounded-md hover:bg-blue-900"
                 >
                 Log In
                 </button>
@@ -67,13 +67,13 @@ const LoginPage = () => {
                 New to our website?{' '}
                 <Link
                     to="/signup"
-                    className="text-red-500 hover:underline"
+                    className="text-blue-800 hover:underline"
                 >
                     Sign up here
                 </Link>
                 </p>
             </div>
-            {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
+            {error && <p className="text-blue-500 mt-4 text-center">{error}</p>}
             </div>
         </div>
     );

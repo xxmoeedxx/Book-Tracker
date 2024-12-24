@@ -54,8 +54,8 @@ const NewListing = () => {
             <form onSubmit={handleSubmit} className="">
                 <div className=" gap-6">
                     {/* Title */}
-                    <div className="flex items-center ">
-                        <label htmlFor="title" className="block px-2 text-sm font-medium text-gray-700">
+                    <div className="flex items-center mb-4">
+                        <label htmlFor="title" className="block w-1/6 text-sm font-medium text-gray-700">
                             Name:
                         </label>
                         <input
@@ -63,14 +63,14 @@ const NewListing = () => {
                             id="title"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            className="w-full mt-1 border border-gray-300 rounded-md shadow-sm p-2"
+                            className="w-3/4 mt-1 border border-gray-300 rounded-md shadow-sm p-2"
                             required
                         />
                     </div>
 
                     {/* Description */}
-                    <div className="flex items-center">
-                        <label htmlFor="description" className="block px-2 text-sm font-medium text-gray-700">
+                    <div className="flex items-center mb-4">
+                        <label htmlFor="description" className="block w-1/6 text-sm font-medium text-gray-700">
                             Description:
                         </label>
                         <input
@@ -78,25 +78,27 @@ const NewListing = () => {
                             id="description"
                             value={description}
                             onChange={(e) => setdescription(e.target.value)}
-                            className="w-full py-8 mt-1 border border-gray-300 rounded-md shadow-sm p-2"
+                            className="w-3/4 mt-1 border border-gray-300 rounded-md shadow-sm p-2"
                             required
                         />
                     </div>
 
                     {/* Due Date */}
-                    <div className="flex items-center">
-                        <label htmlFor="DueDate" className="block px-2 py-4 text-sm font-medium text-gray-700">Due Date: </label>
+                    <div className="flex items-center mb-4">
+                        <label htmlFor="DueDate" className="block w-1/6 text-sm font-medium text-gray-700">
+                            Due Date:
+                        </label>
                         <DatePicker
                             id="DueDate"
                             selected={DueDate}
                             onChange={(date) => setDueDate(date)}
                             placeholderText="Add date"
-                            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+                            className="w-3/4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
                             dateFormat="MMM d, yyyy"
                             required
                         />
                     </div>
-
+                    
                 </div>
                     {/* Submit Button */}
                     <div className="py-6">
