@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.removeItem('token'); // Remove invalid/expired token
       setUser(null);
     }
-    setLoading(false); // Set loading to false after resolving user state
+    setLoading(false); 
   }, []);
 
   const logout = () => {
